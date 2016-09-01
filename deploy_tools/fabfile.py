@@ -23,7 +23,7 @@ def _get_latest_source(source_folder):
     if exists(source_folder + '/.git'):
         run('cd %s && git fetch' % (source_folder))
     else:
-        run('get clone %s %s' % (REPO_URL, source_folder))
+        run('git clone %s %s' % (REPO_URL, source_folder))
     current_commit = local("git log -n 1 --format=%H", capture=True)
     run('cd %s && git reset --hard %s' % (source_folder, current_commit))
 
