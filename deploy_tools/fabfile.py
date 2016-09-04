@@ -39,7 +39,7 @@ def _update_settings(source_folder, site_name):
     if not exists(secret_key_file):
         chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)[]{}'
         key = ''.join(random.SystemRandom().choice(chars) for i in range(50))
-        append(secret_key_file, "Secret_Key = '%s'" % (key))
+        append(secret_key_file, "SECRET_KEY = '%s'" % (key))
     append(settings_path, '\nfrom .secret_key import SECRET_KEY')
 
 def _update_virtualenv(source_folder):
