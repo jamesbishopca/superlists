@@ -1,3 +1,5 @@
+# This test behaves in an inconsistent manner, and has been
+# disabled
 from .base import FunctionalTest
 
 
